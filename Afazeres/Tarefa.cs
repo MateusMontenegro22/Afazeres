@@ -4,10 +4,11 @@ namespace Afazeres;
 
 internal class Tarefa
 {
-    public Tarefa(string nome, int tempoParaSerfeito)
+    public Tarefa(string nome, int tempoParaSerfeito, string observacao)
     {
         this.Nome = nome;
         this.TempoParaSerfeito = tempoParaSerfeito;
+        this.Observações = observacao;
     }
     public string? Nome { get; }
     public int TempoParaSerfeito { get; }
@@ -26,8 +27,12 @@ internal class Tarefa
         string observacao = Console.ReadLine()!;
         
         //Agora a baixo irei começar a construir a tarefa
-        Tarefa tarefa = new(nomeDaTarefa, tempoConcluirConv);
+        Tarefa tarefa = new(nomeDaTarefa, tempoConcluirConv, observacao);
         tarefas.Add(tarefa);
+        Console.WriteLine("Cadastro de tarefa concluida");
+        Thread.Sleep(1000);
+        Menu menu = new Menu();
+        menu.MostrarMenu();
 
     }
 }
