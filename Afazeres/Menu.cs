@@ -2,9 +2,9 @@
 //teste
 public class Menu
 {
-public void MostrarMenu()
+public static void MostrarMenu()
     {
-        List<Tarefa> tarefas = new List<Tarefa>();
+        List<Tarefas> tarefas = new List<Tarefas>();
         Console.WriteLine("TAREFINHAS A FAZER\n\n");
         Console.WriteLine("MENU - Escolha uma opção\n");
         Console.WriteLine("1 - Cadastrar tarefa.");
@@ -17,13 +17,13 @@ public void MostrarMenu()
         switch (opçaoEscolhidaConv)
         {
             case 1:
-                Tarefa.CadastrarTarefa(tarefas);
+                MenuCadastrarTarefa.CadastrarTarefa(tarefas);
                 break;
             case 2:
-                ExcluirTarefa();
+                //ExcluirTarefa();
                 break;
             case 3:
-                ListarTarefas();
+                //ListarTarefas();
                 break;
         }
        
