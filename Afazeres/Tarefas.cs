@@ -1,16 +1,21 @@
 ﻿namespace Afazeres;
 
-internal class Tarefas
+public class Tarefas
 {
-    public Tarefas(string nome, int tempoParaSerfeito, string observacao)
+    public Tarefas(string nome, string tempoParaSerfeito, string obs)
     {
-        this.Nome = nome;
-        this.TempoParaSerfeito = tempoParaSerfeito;
-        this.Observações = observacao;
+        Nome = nome;
+        TempoParaSerfeito = tempoParaSerfeito;
+        Obs = obs;
     }
-    public string Nome { get; }
-    public int TempoParaSerfeito { get; }
+    public string Nome { get; set; }
+    public string TempoParaSerfeito { get; set; }
+    public int Id { get; set; }
+    public string Obs { get; set; }
 
-    public string Observações { get; }
+    public override string ToString()
+    {
+        return $"Id: {Id}  " + $" Tarefa:{Nome} " +  $"Tempo para ser feito: {TempoParaSerfeito}"+ $"Observações: {Obs}" ;
+    }
 
 }

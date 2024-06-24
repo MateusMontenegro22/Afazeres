@@ -20,10 +20,10 @@ public static void MostrarMenu()
                 MenuCadastrarTarefa.CadastrarTarefa(tarefas);
                 break;
             case 2:
-                //ExcluirTarefa();
+                //ExcluirTarefa(); 
                 break;
             case 3:
-                //ListarTarefas();
+                MenuListarTarefas.ListarTarefas(tarefas);
                 break;
         }
        

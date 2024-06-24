@@ -5,6 +5,7 @@ namespace Afazeres;
 
 internal class MenuCadastrarTarefa
 {
+  
    public static void CadastrarTarefa(List<Tarefas> tarefas)
     {
         //Aqui conseguimos os dados da tarefa: nome e tempo de conclusão
@@ -13,14 +14,14 @@ internal class MenuCadastrarTarefa
         string nomeDaTarefa = Console.ReadLine()!;
         Console.WriteLine("Tempo para concluir a tarefa (informar valor unico em minutos): ");
         string tempoConcluir = Console.ReadLine()!;
-        int tempoConcluirConv = int.Parse(tempoConcluir);
         Console.WriteLine("Observação da tarefa: ");
         string observacao = Console.ReadLine()!;
-        
+
         //Agora a baixo irei começar a construir a tarefa
-        Tarefas tarefa = new(nomeDaTarefa, tempoConcluirConv, observacao);
+        Tarefas tarefa = new(nomeDaTarefa, tempoConcluir, observacao);
         tarefas.Add(tarefa);
-        
+        TarefaDal.AdicionarTarefa(tarefa);
+
         Console.WriteLine("Cadastro de tarefa concluida");
         Thread.Sleep(1000);
         Console.Clear();
